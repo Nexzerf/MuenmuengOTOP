@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2 id="typing-effect">เข้าสู่ระบบ</h2>
+        <form action="checkPW.php" method="post">
+            <div class="username">
+                <label for="username">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" alt="User Icon">
+                </label>
+                <input type="text" id="username" name="username" placeholder="ชื่อผู้ใช้" required>
+            </div>
+            <div class="password">
+                <label for="password">
+                    <img src="https://img.icons8.com/ios-glyphs/30/000000/lock--v1.png" alt="Lock Icon">
+                </label>
+                <input type="password" id="password" name="password" placeholder="รหัสผ่าน" required>
+            </div>
+            <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+        <p class="no-account">
+            <a href="register.html">หากไม่มีบัญชีผู้ใช้</a>
+        </p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const textElement = document.getElementById("typing-effect");
+            const text = "เข้าสู่ระบบ";
+            let index = 0;
+            let isAdding = true;
+    
+            function typeEffect() {
+                textElement.style.visibility = "visible"; // ทำให้ข้อความแสดง
+    
+                if (isAdding) {
+                    textElement.innerText = text.slice(0, index + 1);
+                    index++;
+                    if (index === text.length) {
+                        isAdding = false;
+                        setTimeout(typeEffect, 1000); // รอ 1 วินาทีก่อนลบ
+                        return;
+                    }
+                } else {
+                    textElement.innerText = text.slice(0, index - 1);
+                    index--;
+                    if (index === 0) {
+                        isAdding = true;
+                    }
+                }
+                setTimeout(typeEffect, isAdding ? 150 : 100); // เพิ่มเร็วขึ้นเมื่อลบ
+            }
+    
+            typeEffect();
+        });
+    </script>
+    
+</body>
+</html>

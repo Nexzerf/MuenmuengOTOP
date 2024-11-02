@@ -1,0 +1,88 @@
+/* signup.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Prompt', sans-serif;
+    background-color: #ffffff;
+}
+
+.signup-container {
+    text-align: center;
+}
+
+.signup-container h2 {
+    font-size: 28px;
+    font-weight: 500;
+    background: linear-gradient(90deg, #88c0a8, #c3f1ed); /* ไล่สีจากเขียวไปฟ้า */
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-bottom: 30px;
+    visibility: hidden; /* ซ่อนข้อความในตอนเริ่ม */
+}
+
+.email, .username, .password, .confirm-password {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    padding: 10px 15px;
+    width: 700px; /* ปรับความยาวของช่องข้อความ */
+    background-color: #c3f1ed; /* สีฟ้าอ่อน */
+}
+
+.email img, .username img, .password img, .confirm-password img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.email input, .username input, .password input, .confirm-password input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    background: none;
+}
+
+button {
+    width: 350px; /* ปรับความยาวของปุ่มให้ตรงกับช่องข้อความ */
+    padding: 12px 0;
+    font-size: 16px;
+    background: linear-gradient(90deg, #f8d29d, #f7b971); /* ไล่สีตามภาพ */
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #f7b971, #f8d29d); /* ไล่สีตรงข้ามเมื่อ hover */
+}
+
+.has-account {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+}
+
+.has-account a {
+    color: #888;
+    text-decoration: none;
+}
+
+.has-account a:hover {
+    text-decoration: underline;
+}

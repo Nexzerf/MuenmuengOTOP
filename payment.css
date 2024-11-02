@@ -1,0 +1,242 @@
+/* Global styling */
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #B9E5E5;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.back-arrow {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+.back-arrow:hover {
+    color: #555;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px; /* Space for the fixed header */
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Left section styling */
+.section {
+    width: 60%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 400px; /* Extend height */
+}
+.section h2 {
+    margin-top: 0;
+}
+.add-address-button {
+    display: inline-block;
+    background-color: #FFC966;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.add-address-button:hover {
+    background-color: #FFB347;
+}
+
+/* Payment method and coupon section */
+.payment-section, .coupon-section {
+    margin-top: 20px;
+}
+.coupon-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.coupon-input select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+.coupon-confirm-button {
+    background-color: #66D1D1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+.coupon-confirm-button:hover {
+    background-color: #52B0B0;
+}
+
+/* Right summary section */
+.summary-section {
+    width: 35%;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 300px; /* Extend height */
+}
+.summary-section h3 {
+    margin-top: 0;
+}
+.summary-details {
+    margin-bottom: 20px;
+}
+.order-button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(90deg, #A8E0E0, #FFC966);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.order-button:hover {
+    background: linear-gradient(90deg, #8FC5C5, #FFA44D);
+}
+
+/* Footer Styling */
+footer {
+    padding: 40px 0;
+    background: linear-gradient(90deg, #F3E6BA, #F4D593, #7BCFC8);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: gradient-animation 10s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding-left: 0;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.highlight-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(218, 200, 95, 0.5); /* เพิ่ม glow effect */
+    animation: glow 1.5s ease-in-out infinite alternate; /* animation ให้สว่างขึ้น */
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5); }
+    100% { text-shadow: 0 0 20px rgb(0, 0, 0), 0 0 30px rgba(0, 0, 0, 0.8); }
+}
+
+.social-icons a {
+    color: white;
+    font-size: 50px;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: pulse 2s infinite;
+    margin-left: 0; /* ติดขอบซ้าย */
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.social-icons a:hover {
+    color: #d6d6d6;
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0px 0px 10px rgba(233, 233, 233, 0.5));
+}
+
+.contact-info {
+    font-size: 18px;
+    text-align: right;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: transform 0.3s ease;
+}
+
+.contact-info p:hover {
+    transform: translateX(5px);
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.contact-info i:hover {
+    color: #7BCFC8;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    transform: skewY(-20deg);
+    animation: shine 5s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) skewY(-20deg); }
+    100% { transform: translateX(100%) skewY(-20deg); }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;700&display=swap" rel="stylesheet">
+<title>Order Page</title>
+<link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+<header>
+    <a href="previous-page.html" class="back-arrow">&#8592;</a>
+</header>
+
+<div class="container">
+    <!-- Left Section: Shipping and Payment -->
+    <div class="section">
+        <h2>① การจัดส่ง</h2>
+        <button class="add-address-button">+ เพิ่มที่อยู่สำหรับการจัดส่ง</button>
+
+        <div class="payment-section">
+            <h2>② วิธีการชำระเงิน</h2>
+        </div>
+
+        <div class="coupon-section">
+            <h2>คูปอง</h2>
+            <div class="coupon-input">
+                <select>
+                    <option value="">เลือกคูปอง</option>
+                </select>
+                <button class="coupon-confirm-button">ยืนยัน</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Section: Order Summary -->
+    <div class="summary-section">
+        <h3>สรุปคำสั่งซื้อ (2 รายการ)</h3>
+        <div class="summary-details">
+            <p>ยอดรวม: <strong>฿89999</strong></p>
+            <p>ส่วนลดทั้งหมด: <strong>฿0</strong></p>
+            <p>ค่าจัดส่ง: <strong style="color: green;">ฟรี</strong></p>
+            <p><strong>ยอดสั่งซื้อ รวม VAT: ฿89999</strong></p>
+        </div>
+        <button class="order-button" onclick="placeOrder()">สั่งซื้อ</button>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="left-section">
+            <div class="social-icons">
+                <p class="highlight-title">⠀⠀ติดต่อเรา</p>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-line"></i></a>
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>ช่องทางการติดต่อ</p>
+            <p><i class="fas fa-envelope"></i> Email: muanmueng@cdd.mail.go.th</p>
+            <p><i class="fas fa-phone"></i> โทรศัพท์: 02-123456789</p>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    function placeOrder() {
+        window.location.href = 'thankyou.html';
+    }
+</script>
+
+</body>
+</html>
